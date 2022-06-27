@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/coverImageView"
+        android:layout_width="100dp"
+        android:padding="8dp"
+        android:layout_height="100dp"
+        android:background="@drawable/background_gray_stroke_radius_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="12dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coverImageView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--ellipsize는 너무 길면 ..으로 표시해주고 lines는 최대 줄 수가 1줄이라는 것을 표기한 것이다-->
